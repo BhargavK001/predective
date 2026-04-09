@@ -17,4 +17,14 @@ export const getLatestVibrationData = async () => {
     }
 };
 
+export const getVibrationHistory = async (limit = 100) => {
+    try {
+        const response = await api.get(`/vibration/history?limit=${limit}`);
+        return response.data;
+    } catch (error) {
+        console.error('API Error:', error.message);
+        throw error;
+    }
+};
+
 export default api;

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getLatestVibrationData } from './services/api';
 import Dashboard from './components/Dashboard';
+import { colors, typography } from './tokens';
 
 function App() {
   const [data, setData] = useState(null);
@@ -14,11 +15,10 @@ function App() {
         const result = await getLatestVibrationData();
         setData(result);
 
-        // Update history (keep last 60 points / 30 seconds)
         setHistory(prev => {
           const newPoint = {
             ...result,
-            time: new Date().toLocaleTimeString()
+            time: new Date().toLocaleTimeString(),
           };
           const newHistory = [...prev, newPoint];
           return newHistory.slice(-60);
@@ -28,8 +28,7 @@ function App() {
         setError(null);
       } catch (err) {
         console.error('Failed to fetch data:', err);
-        setError('Waiting for Arduino data...');
-        // Keep loading state if we never got data
+        setError('Waiting for sensor data...');
       }
     };
 
@@ -42,8 +41,16 @@ function App() {
     return (
       <div className="full-screen">
         <div>
-          <div className="spinner" style={{ margin: '0 auto 1.5rem' }}></div>
-          <p style={{ fontSize: '0.875rem', letterSpacing: '0.05em' }}>INITIALIZING SYSTEM...</p>
+          <div className="spinner" style={{ margin: '0 auto 16px' }} />
+          <p style={{
+            fontSize: typography.labelSize,
+            fontWeight: typography.labelWeight,
+            letterSpacing: typography.labelLetterSpacing,
+            textTransform: 'uppercase',
+            color: colors.textSecondary,
+          }}>
+            Initializing system…
+          </p>
         </div>
       </div>
     );
@@ -52,9 +59,21 @@ function App() {
   if (error && !data) {
     return (
       <div className="full-screen">
-        <div style={{ maxWidth: '300px' }}>
-          <h2 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>CONNECTION PENDING</h2>
-          <p style={{ fontSize: '0.875rem', color: '#666' }}>{error}</p>
+        <div style={{ maxWidth: 300, textAlign: 'center' }}>
+          <p style={{
+            fontSize: '14px',
+            fontWeight: typography.headingWeight,
+            color: colors.textPrimary,
+            marginBottom: 8,
+          }}>
+            Connection Pending
+          </p>
+          <p style={{
+            fontSize: '13px',
+            color: colors.textSecondary,
+          }}>
+            {error}
+          </p>
         </div>
       </div>
     );
