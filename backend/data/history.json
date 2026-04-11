@@ -1,0 +1,156 @@
+[
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 120
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 1,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T13:53:02.591Z"
+    },
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 120
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 1,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T14:18:10.348Z"
+    },
+    {
+        "input": {
+            "air_temperature": 100,
+            "process_temperature": 310,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 120
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 1,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T14:41:43.908Z"
+    },
+    {
+        "input": {
+            "air_temperature": 0,
+            "process_temperature": 500,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 120
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 0.98,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T14:42:00.454Z"
+    },
+    {
+        "input": {
+            "air_temperature": 0,
+            "process_temperature": 500,
+            "rotational_speed": 20000,
+            "torque": 40,
+            "tool_wear": 120
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 0.64,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T14:42:06.341Z"
+    },
+    {
+        "input": {
+            "air_temperature": 0,
+            "process_temperature": 500,
+            "rotational_speed": 20000,
+            "torque": 5,
+            "tool_wear": 120
+        },
+        "prediction": 1,
+        "status": "Failure Risk",
+        "confidence": 0.82,
+        "suggestion": "Potential machine failure detected. Perform inspection and preventive maintenance.",
+        "timestamp": "2026-04-09T14:42:11.443Z"
+    },
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 0
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 1,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T15:10:09.848Z"
+    },
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 0
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 1,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T15:10:11.060Z"
+    },
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 1500,
+            "torque": 40,
+            "tool_wear": 0
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 1,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T15:10:11.887Z"
+    },
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 130,
+            "torque": 40,
+            "tool_wear": 0
+        },
+        "prediction": 0,
+        "status": "Normal",
+        "confidence": 0.95,
+        "suggestion": "Machine is operating normally. Continue regular monitoring.",
+        "timestamp": "2026-04-09T15:10:16.904Z"
+    },
+    {
+        "input": {
+            "air_temperature": 300,
+            "process_temperature": 310,
+            "rotational_speed": 10,
+            "torque": 4000000,
+            "tool_wear": 555
+        },
+        "prediction": 1,
+        "status": "Failure Risk",
+        "confidence": 0.85,
+        "suggestion": "Potential machine failure detected. Perform inspection and preventive maintenance.",
+        "timestamp": "2026-04-09T15:10:25.422Z"
+    }
+]

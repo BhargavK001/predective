@@ -40,3 +40,13 @@ yarn-error.log*
 *.sw?
 *.sqlite
 *.sqlite3
+
+# Python / ML
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+ENV/
+*.pkl
+ml-service/metrics.json
+ml-service/data/
